@@ -2227,7 +2227,7 @@
         "DisplayName": "Kiln Ignore Private Area Check",
         "Category": "Valheim Plus:extension",
         "Subcategory": "Basic:settings:1",
-        "Description": "This option prevents the Kiln to pull items from warded areas if it isn't placed inside of it. or convenience, we recommend this to be enabled.",
+        "Description": "This option prevents the Kiln to pull items from warded areas if it isn't placed inside of it. For convenience, we recommend this to be enabled.",
         "Keywords": "Kiln,Ignore,Private,Area,Check",
         "FieldName": "Kiln.ignorePrivateAreaCheck",
         "InputType": "checkbox",
@@ -2658,7 +2658,7 @@
         "DisplayName": "Tameable Animal Types",
         "Category": "Valheim Plus:extension",
         "Subcategory": "Basic:settings:1",
-        "Description": "A comma-separated list of animals that can be tamed.",
+        "Description": "A comma-separated list of animals that can be tamed. Valid types are: boar, hen, wolf, lox, asksvin, all, none.",
         "Keywords": "Tameable,Animal,Types",
         "FieldName": "Tameable.animalTypes",
         "InputType": "text",
@@ -2782,7 +2782,7 @@
         "DisplayName":  "Tameable Ignore Hunger",
         "Category":  "Valheim Plus:extension",
         "Subcategory":  "Basic:settings:1",
-        "Description":  "Set to true to ignore hunger requirements while taming. Still requires you food to initiate the taming process.",
+        "Description":  "Set to true to ignore hunger requirements while taming. Still requires food to initiate the taming process.",
         "Keywords":  "Tameable,Ignore,Hunger",
         "FieldName":  "Tameable.ignoreHunger",
         "InputType":  "checkbox",
@@ -3457,7 +3457,8 @@
         "ParamFieldName":  "Turret.viewDistance",
         "IncludeInCommandLine":  false,
         "DefaultValue":  "0",
-        "EnumValues":  {}
+        "EnumValues":  {},
+        "Suffix": "%"
     },
     {
         "DisplayName":  "Turret Projectile Velocity",
@@ -3471,7 +3472,8 @@
         "ParamFieldName":  "Turret.projectileVelocity",
         "IncludeInCommandLine":  false,
         "DefaultValue":  "0",
-        "EnumValues":  {}
+        "EnumValues":  {},
+        "Suffix": "%"
     },
     {
         "DisplayName":  "Turret Projectile Accuracy",
@@ -3485,7 +3487,8 @@
         "ParamFieldName":  "Turret.projectileAccuracy",
         "IncludeInCommandLine":  false,
         "DefaultValue":  "0",
-        "EnumValues":  {}
+        "EnumValues":  {},
+        "Suffix": "%"
     },
     {
         "DisplayName":  "Oven Settings Enable",
@@ -6637,7 +6640,8 @@
         "ParamFieldName": "StructuralIntegrity.wood",
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
-        "EnumValues": {}
+        "EnumValues": {},
+        "Suffix": "%"
     },
     {
         "DisplayName": "Structural Integrity Loss of Stone",
@@ -6651,7 +6655,8 @@
         "ParamFieldName": "StructuralIntegrity.stone",
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
-        "EnumValues": {}
+        "EnumValues": {},
+        "Suffix": "%"
     },
     {
         "DisplayName": "Structural Integrity Loss of Iron",
@@ -6665,7 +6670,8 @@
         "ParamFieldName": "StructuralIntegrity.iron",
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
-        "EnumValues": {}
+        "EnumValues": {},
+        "Suffix": "%"
     },
     {
         "DisplayName": "Structural Integrity Loss of Hardwood",
@@ -6679,7 +6685,53 @@
         "ParamFieldName": "StructuralIntegrity.hardWood",
         "IncludeInCommandLine": false,
         "DefaultValue": "0",
-        "EnumValues": {}
+        "EnumValues": {},
+        "Suffix": "%"
+    },
+    {
+        "DisplayName":  "Structural Integrity Marble",
+        "Category":  "Valheim Plus:extension",
+        "Subcategory":  "Server:dns:3",
+        "Description":  "Each of these values reduce the loss of structural integrity by distance by % less. The value 100 would result in disabled structural integrity over distance, does not allow for placement in free air without disableStructuralIntegrity.",
+        "Keywords":  "Structural,Integrity,Marble",
+        "FieldName":  "StructuralIntegrity.marble",
+        "InputType":  "number",
+        "IsFlagArgument":  false,
+        "ParamFieldName":  "StructuralIntegrity.marble",
+        "IncludeInCommandLine":  false,
+        "DefaultValue":  "0",
+        "EnumValues":  {},
+        "Suffix": "%"
+    },
+    {
+        "DisplayName":  "Structural Integrity Ashstone",
+        "Category":  "Valheim Plus:extension",
+        "Subcategory":  "Server:dns:3",
+        "Description":  "Valheim Plus setting for ashstone.",
+        "Keywords":  "Structural,Integrity,Ashstone",
+        "FieldName":  "StructuralIntegrity.ashstone",
+        "InputType":  "number",
+        "IsFlagArgument":  false,
+        "ParamFieldName":  "StructuralIntegrity.ashstone",
+        "IncludeInCommandLine":  false,
+        "DefaultValue":  "0",
+        "EnumValues":  {},
+        "Suffix": "%"
+    },
+    {
+        "DisplayName":  "Structural Integrity Ancient",
+        "Category":  "Valheim Plus:extension",
+        "Subcategory":  "Server:dns:3",
+        "Description":  "Valheim Plus setting for ancient.",
+        "Keywords":  "Structural,Integrity,Ancient",
+        "FieldName":  "StructuralIntegrity.ancient",
+        "InputType":  "number",
+        "IsFlagArgument":  false,
+        "ParamFieldName":  "StructuralIntegrity.ancient",
+        "IncludeInCommandLine":  false,
+        "DefaultValue":  "0",
+        "EnumValues":  {},
+        "Suffix": "%"
     },
     {
         "DisplayName":  "Structural Integrity Disable Damage To Player Carts",
@@ -6714,48 +6766,6 @@
             "False":  "false",
             "True":  "true"
         }
-    },
-    {
-        "DisplayName":  "Structural Integrity Marble",
-        "Category":  "Valheim Plus:extension",
-        "Subcategory":  "Server:dns:3",
-        "Description":  "Each of these values reduce the loss of structural integrity by distance by % less. The value 100 would result in disabled structural integrity over distance, does not allow for placement in free air without disableStructuralIntegrity.",
-        "Keywords":  "Structural,Integrity,Marble",
-        "FieldName":  "StructuralIntegrity.marble",
-        "InputType":  "number",
-        "IsFlagArgument":  false,
-        "ParamFieldName":  "StructuralIntegrity.marble",
-        "IncludeInCommandLine":  false,
-        "DefaultValue":  "0",
-        "EnumValues":  {}
-    },
-    {
-        "DisplayName":  "Structural Integrity Ashstone",
-        "Category":  "Valheim Plus:extension",
-        "Subcategory":  "Server:dns:3",
-        "Description":  "Valheim Plus setting for ashstone.",
-        "Keywords":  "Structural,Integrity,Ashstone",
-        "FieldName":  "StructuralIntegrity.ashstone",
-        "InputType":  "number",
-        "IsFlagArgument":  false,
-        "ParamFieldName":  "StructuralIntegrity.ashstone",
-        "IncludeInCommandLine":  false,
-        "DefaultValue":  "0",
-        "EnumValues":  {}
-    },
-    {
-        "DisplayName":  "Structural Integrity Ancient",
-        "Category":  "Valheim Plus:extension",
-        "Subcategory":  "Server:dns:3",
-        "Description":  "Valheim Plus setting for ancient.",
-        "Keywords":  "Structural,Integrity,Ancient",
-        "FieldName":  "StructuralIntegrity.ancient",
-        "InputType":  "number",
-        "IsFlagArgument":  false,
-        "ParamFieldName":  "StructuralIntegrity.ancient",
-        "IncludeInCommandLine":  false,
-        "DefaultValue":  "0",
-        "EnumValues":  {}
     },
     {
         "DisplayName": "Ward Settings Enable",
@@ -7142,7 +7152,7 @@
         "DisplayName":  "Auto Stack All Ignore Private Area Check",
         "Category":  "Valheim Plus:extension",
         "Subcategory":  "Server:dns:3",
-        "Description":  "This option prevents to \"Stack All\" into chests from warded areas if the player doesnt have access to it.",
+        "Description":  "This option prevents to \"Stack All\" into chests from warded areas if the player does not have access to it. Turn it off to prevent stacking into warded areas you cannot access.",
         "Keywords":  "Auto,Stack,Auto,Stack,All,Ignore,Private,Area,Check",
         "FieldName":  "AutoStack.autoStackAllIgnorePrivateAreaCheck",
         "InputType":  "checkbox",
@@ -7331,7 +7341,7 @@
         "EnumValues":  {}
     },
     {
-        "DisplayName":  "Time Total Day Time In Seconds",
+        "DisplayName":  "Total Day Time In Seconds",
         "Category":  "Valheim Plus:extension",
         "Subcategory":  "Server:dns:3",
         "Description":  "Sets the duration of a whole day. This will affect the day count and may change time of day once after activation (new Worlds are not affected).",
@@ -7356,7 +7366,8 @@
         "ParamFieldName":  "Time.nightPercent",
         "IncludeInCommandLine":  false,
         "DefaultValue":  "30",
-        "EnumValues":  {}
+        "EnumValues":  {},
+        "Suffix":  "%"
     },
     {
         "DisplayName":  "Ship Settings Enable",
@@ -7494,7 +7505,7 @@
         "EnumValues":  {}
     },
     {
-        "DisplayName":  "Egg Grow Time",
+        "DisplayName":  "Chick Grow Time",
         "Category":  "Valheim Plus:extension",
         "Subcategory":  "Server:dns:3",
         "Description":  "This value determines the time it takes for a chicken to grow into an adult in seconds. A value of 3000 means 50 minutes.",
