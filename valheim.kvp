@@ -1,4 +1,4 @@
-Meta.DisplayName=Valheim (NL-Dev)
+Meta.DisplayName=Valheim
 Meta.Description=Includes optional support for ValheimPlus and BepinEx
 Meta.OS=Windows, Linux
 Meta.AarchSupport=Unknown
@@ -24,7 +24,7 @@ Meta.NoCommercialUsage=False
 Meta.ConfigVersion=6
 Meta.ReleaseNotes=
 Meta.BreakingReleaseNotes=
-Meta.AppConfigId=30908a53-3563-4e31-89b1-abaf577ff955
+Meta.AppConfigId=1b7a66b4-6a89-47e3-9d18-5afa37a4634e
 Meta.ImportableExtensions=[]
 App.DisplayName=Valheim
 App.RootDir=./Valheim/
